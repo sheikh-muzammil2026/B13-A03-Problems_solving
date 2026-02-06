@@ -9,7 +9,148 @@
 
     typeof return string, তাই comparison always "number" বা "string" এর সাথে করতে হবে
     .toFixed(3) দিয়ে দশমিকের পরে ৩ ঘর দেখা যায়। 
-    
+     return এর সাথে assignment একসাথে করা যাবে না। toFixed(3) হল একটা নির্দেশনা। নতুন করে কিছু যোগ করা। কিন্তু রিটার্ন মেথড তা গ্রহন করে না । 
+          
+    <section class="problem-2_notes">
+
+## `startsWith()` কী?
+
+`startsWith()` হলো **string method**।
+এটা চেক করে কোনো **string নির্দিষ্ট কোনো word / letter দিয়ে শুরু হয়েছে কি না**।
+
+👉 রেজাল্ট সবসময় **true** বা **false** হয়।
+
+---
+
+## Basic Syntax
+
+```js
+string.startsWith(searchString)
+```
+
+---
+
+## উদাহরণ ১: সাধারণ ব্যবহার
+
+```js
+let text = "JavaScript is awesome";
+
+console.log(text.startsWith("Java")); 
+// true
+
+console.log(text.startsWith("Script")); 
+// false
+```
+
+🧠 কারণ:
+
+* `"JavaScript is awesome"` → `"Java"` দিয়ে শুরু ✔
+* কিন্তু `"Script"` দিয়ে শুরু ❌
+
+---
+
+## উদাহরণ ২: single letter দিয়ে চেক
+
+```js
+let name = "Ahmed";
+
+console.log(name.startsWith("A")); 
+// true
+
+console.log(name.startsWith("a")); 
+// false
+```
+
+📌 মনে রাখবে:
+**Case-sensitive** → `A` আর `a` এক না।
+
+---
+
+## উদাহরণ ৩: position ব্যবহার করে
+
+`startsWith()`-এ দ্বিতীয় parameter দেওয়া যায় → কোন index থেকে চেক করবে।
+
+```js
+let text = "Hello World";
+
+console.log(text.startsWith("World", 6));
+// true
+```
+
+🧠 কারণ:
+
+* index `6` থেকে string = `"World"`
+* তাই `"World"` দিয়ে শুরু ✔
+
+---
+
+## উদাহরণ ৪: if condition-এ ব্যবহার
+
+```js
+let email = "admin@gmail.com";
+
+if (email.startsWith("admin")) {
+  console.log("Admin email detected");
+}
+```
+
+🟢 Output:
+
+```
+Admin email detected
+```
+
+---
+
+## বাস্তব উদাহরণ: URL চেক
+
+```js
+let url = "https://google.com";
+
+if (url.startsWith("https")) {
+  console.log("Secure website");
+} else {
+  console.log("Not secure");
+}
+```
+
+---
+
+## ❌ common ভুল
+
+```js
+text.startsWith = "Java"; // ❌ ভুল
+```
+
+✔ সঠিক:
+
+```js
+text.startsWith("Java");
+```
+
+---
+
+## সংক্ষেপে মনে রাখো
+
+startsWith() শুধু চেক করে, কোনো পরিবর্তন করে না
+
+* ✅ string method
+* ✅ result → true / false
+* ✅ case-sensitive
+* ❌ assignment না, function call
+
+---
+
+চাও তো আমি
+
+* `endsWith()`
+* `includes()`
+* বা real project example (form validation, login, filtering)
+
+এগুলোর সাথে তুলনা করে দেখাতে পারি 👌
+
+    </section>
     <script src="./problem-1.js"></script>
+    <script src="./problem-2.js"></script>
 </body>
 </html>

@@ -2,9 +2,9 @@
 
 function newPrice(currentPrice , discount ) {
          let finalPrice =0;
-         let checkValidation ="";
+        
     if(typeof currentPrice != "number" || typeof discount != "number"  || discount < 0 || discount > 100 ){  // typeof return string, তাই comparison always "number" বা "string" এর সাথে করতে হবে অর্থাৎ Number type-এর জন্য quotes লাগবে। 
-        return checkValidation ="Invalid";
+        return "Invalid";
 
     }else{
          let disAmount = (currentPrice * discount) / 100;
@@ -14,7 +14,7 @@ function newPrice(currentPrice , discount ) {
     }
 }
 
-console.log(newPrice(90,0));
+console.log(newPrice(90,30));
 
 
 
