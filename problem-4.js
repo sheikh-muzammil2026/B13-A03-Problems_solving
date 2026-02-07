@@ -1,9 +1,15 @@
 /*function signature/sample */
 
 function gonoVote(array) {
+    let ha =0;
+    let na =0;
     if(!Array.isArray(array)) return "Invalid";
-    if("ha" > "na") return true;
-    if("na" > "ha") return "equal";
+    for(const vote of array){
+        if(vote === "ha") ha++;
+        if(vote === "na") na ++;
+    }
+    if( ha > na) return true;
+    if( na == ha) return "equal";
     return false;
 }
 
