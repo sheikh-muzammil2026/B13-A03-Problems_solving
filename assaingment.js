@@ -1,5 +1,4 @@
 //Problem-01: New Price for Eid Sale
-
 function newPrice(currentPrice , discount ) {
          let finalPrice =0;
         
@@ -13,7 +12,6 @@ function newPrice(currentPrice , discount ) {
            return newPrice;
     }
 }
-
 
 //Problem-02: OTP Validation for Zapshift
 function validOtp(otp) {
@@ -38,10 +36,8 @@ function finalScore (omr) {
         return finalScore;
     
 }  
-   
 
 //Problem-04: Upcoming Gono Vote
-
 function gonoVote(array) {
     let ha =0;
     let na =0;
@@ -54,6 +50,7 @@ function gonoVote(array) {
     if( na == ha) return "equal";
     return false;
 }
+
 
 //Problem-05: Text Analyzer for an AI Company
 function  analyzeText(str) {
@@ -79,5 +76,4 @@ function  analyzeText(str) {
          }
          return output;
 }
-
 
