@@ -87,8 +87,8 @@ let student = {
         }
          let subNames = subjects_names.join(", ") ;
 
-        for(const f in this.friends){
-            friendsNames.push(f);
+        for(const f of this.friends){
+            friendsNames.push(f.name);
         }
         let FNames = friendsNames.join(", ") ;
         return {
